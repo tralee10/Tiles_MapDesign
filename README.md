@@ -46,7 +46,7 @@ The combined tile set overlays the pickleball court locations on top of the cust
 
 4. **Theme Map (Asian Heritage Colors in Seattle)**
 
-The themed map is a custom Mapbox-designed layer that highlights Asian heritage in Seattle through deliberate use of colors and labeling styles. I chose this theme because Seattle has a long history of Asian communities and cultural influence, which is especially visible in neighborhoods such as the International District. The design emphasizes cultural identity using visual elements to communicate the theme and create a meaningful narrative map. This layer demonstrates how cartographic design choices can be used to express cultural significance and personal research interests beyond purely data-driven mapping.
+The themed map is a custom Mapbox-designed layer that highlights Asian heritage in Seattle through deliberate use of colors (red, gold, green) and labeling styles. I chose this theme because Seattle has a long history of Asian communities and cultural influence, which is especially visible in neighborhoods such as the International District. The design emphasizes cultural identity using visual elements to communicate the theme and create a meaningful narrative map. This layer demonstrates how cartographic design choices can be used to express cultural significance and personal research interests beyond purely data-driven mapping.
 
    - Zoom levels: 10–13  
    - Examined area: City of Seattle
