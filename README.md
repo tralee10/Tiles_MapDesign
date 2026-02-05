@@ -17,7 +17,7 @@ https://tralee10.github.io/Tiles_MapDesign/index.html
 
 ## Map Layers / Tile Sets / Images
 
-1. **Basemap**
+### 1. **Basemap**
 
 The basemap is a simplified dark monochrome map of Seattle designed to provide clear geographic context without overwhelming the viewer. It was created by modifying an existing classic Mapbox basemap style, including changes to color usage, label fonts, and icon styling, while keeping the overall look minimal and readable. The purpose of this basemap is to serve as a neutral background that highlights the city’s streets, neighborhoods, and waterfront, making it easier to understand where thematic layers are located in relation to Seattle’s urban layout.
 
@@ -26,7 +26,7 @@ The basemap is a simplified dark monochrome map of Seattle designed to provide c
 
 ![Basemap](img/tile1.png)
 
-2. **Pickleball (Thematic Layer)**
+#### 2. **Pickleball (Thematic Layer)**
 
 This thematic layer displays the locations of pickleball courts across the City of Seattle using a geospatial dataset from the Seattle GeoData site. I chose this dataset because pickleball is a rapidly growing sport that originated in Washington, and Seattle has been actively incorporating pickleball courts into parks and recreation spaces. Mapping these locations helps visualize how the city supports this emerging sport and reveals patterns in where courts are concentrated. This layer focuses solely on the pickleball data, allowing users to explore the spatial distribution of courts without the influence of other map layers.  
 
