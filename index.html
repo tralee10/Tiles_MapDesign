@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Lab 4 Tile Maps</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.css" rel="stylesheet" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+/* Menu styling */
+.menu {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  top: 50px;
+  right: 10px;
+  z-index: 2;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  min-width: 150px;
+}
+
+/* Map title styling */
+.map-title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  background: rgba(255,255,255,0.95);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  max-width: 300px;
+}
+
+.map-title h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+
+.map-title p {
+  margin: 2px 0;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+<div id="map"></div>
+
+<!-- Map title and description -->
+<div class="map-title">
+    <h3>4 Different Design Maps of Seattle</h3>
+    <p>Toggle different tile layers using the menu on the right.</p>
+    <p>---</p>
+    <p><strong>Basemap:</strong> This map is just a monochrome basemap.</p>
+    <p><strong>Pickleball:</strong> This map shows pickleball court locations around Seattle.</p>
+    <p><strong>Combined:</strong> This map shows pickleball court locations around Seattle with the basemap.</p>
+    <p><strong>Theme:</strong> This map is a themed map, with the colors based on Asian Heritage.</p>
+    ---
+    <p><strong>Data Source:</strong> City of Seattle Open Data</p>
+</div>
+
+<!-- Layer switcher menu -->
+<div class="menu">
+  <strong>Layers</strong><br>
+  <label><input type="checkbox" onclick="toggleLayer('tiles1')"> Basemap</label><br>
+  <label><input type="checkbox" onclick="toggleLayer('tiles2')"> Pickleball Courts</label><br>
+  <label><input type="checkbox" onclick="toggleLayer('tiles3')"> Combined</label><br>
+  <label><input type="checkbox" onclick="toggleLayer('tiles4')"> Theme Map</label>
+</div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoidHJhbGVlMTAiLCJhIjoiY202cmp6MTd5MjNrMDJpcHY4N3JtZDFuNCJ9.FDnd5ftof56RdHpFHNsjxQ';
+
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/light-v11',
+  center: [-122.27, 47.61],
+  zoom: 12
+});
+
+map.on('load', () => {
+  addTiles('tiles1', 'assets/tileset_1/{z}/{x}/{y}.png');
+  addTiles('tiles2', 'assets/tileset_2/{z}/{x}/{y}.png');
+  addTiles('tiles3', 'assets/tileset_3/{z}/{x}/{y}.png');
+  addTiles('tiles4', 'assets/tileset_4/{z}/{x}/{y}.png');
+});
+
+function addTiles(id, path) {
+  map.addSource(id, {
+    type: 'raster',
+    tiles: [path],
+    tileSize: 256
+  });
+
+  map.addLayer({
+    id: id,
+    type: 'raster',
+    source: id,
+    layout: { visibility: 'none' }
+  });
+}
+
+function toggleLayer(id) {
+  const visibility = map.getLayoutProperty(id, 'visibility');
+  map.setLayoutProperty(
+    id,
+    'visibility',
+    visibility === 'visible' ? 'none' : 'visible'
+  );
+}
+
+const nav = new mapboxgl.NavigationControl({
+    showCompass: true,
+    showZoom: true
+});
+map.addControl(nav, 'bottom-left');
+
+</script>
+
+</body>
+</html>
