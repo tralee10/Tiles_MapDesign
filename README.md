@@ -1,6 +1,6 @@
 # 4 Different Tile Design Maps of Seattle
 
-This project showcases four tile-based maps of Seattle built with Mapbox GL JS, demonstrating different approaches to basemap design, thematic mapping, and visual storytelling. The maps include a custom monochrome basemap, a thematic layer of pickleball court locations, a combined map for spatial context, and a culturally themed map highlighting Asian heritage in Seattle. Together, these maps illustrate how data, design, and interaction come together in a web mapping application.
+This project showcases four tile-based maps of Seattle built with Mapbox GL JS and QGIS, demonstrating different approaches to basemap design, thematic mapping, and visual storytelling. The maps include a custom monochrome basemap, a thematic layer of pickleball court locations, a combined map for spatial context, and a culturally themed map highlighting Asian heritage in Seattle. Together, these maps illustrate how data, design, and interaction come together in a web mapping application.
 
 
 ## Web Map
@@ -56,6 +56,7 @@ The themed map is a custom Mapbox-designed layer that highlights Asian heritage 
 
 ## Data Source
 
+- **QGIS:** Create tiles
 - **Basemap:** Mapbox Light/Dark style  
 - **Pickleball Courts:** [Seattle GeoData Pickleball Courts Dataset](https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::pickleball-courts/explore?location=47.616431%2C-122.329550%2C11)
 - **Theme Map:** Custom map design based on Asian Heritage  
