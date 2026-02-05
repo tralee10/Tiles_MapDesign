@@ -38,7 +38,7 @@ https://tralee10.github.io/Tiles_MapDesign/index
 ## Data Source
 
 - **Basemap:** Mapbox Light style  
-- **Pickleball Courts:** [Seattle GeoData Pickleball Courts Dataset]([https://data.seattle.gov/](https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::pickleball-courts/explore?location=47.616431%2C-122.329550%2C11))  
+- **Pickleball Courts:** [Seattle GeoData Pickleball Courts Dataset]([https://data.seattle.gov/](https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::pickleball-courts/explore?location=47.616431%2C-122.329550%2C11)])  
 - **Theme Map:** Custom map design based on Asian Heritage  
 
 ---
