@@ -59,6 +59,10 @@ The themed map is a custom Mapbox-designed layer that highlights Asian heritage 
 - **QGIS:** Create tiles
 - **Basemap:** Mapbox Light/Dark style  
 - **Pickleball Courts:** [Seattle GeoData Pickleball Courts Dataset](https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::pickleball-courts/explore?location=47.616431%2C-122.329550%2C11)
-- **Theme Map:** Custom map design based on Asian Heritage  
+- **Theme Map:** Custom map design based on Asian Heritage
+
+## AI Disclosure
+
+No AI tools were used in this assignment.
 
 
